@@ -167,7 +167,8 @@ ul{
   justify-content: space-between;
   align-items: center;
   padding: 10px 15px 10px 10px;
-align-content: center;}
+  align-content: center;
+}
 .carte-texte{
   color: black;
 }
@@ -186,7 +187,7 @@ align-content: center;}
     height: 35px;
     align-items: center;
     justify-content: center;
-    }
+}
 .carte-icone .fa-regular{
     color: black;
 }
@@ -202,6 +203,7 @@ align-content: center;}
 }
 .carte-icone .fa-solid:hover{
     opacity: 1;
+    font-size: 1.6em;
 }
 
 /*---------------------menus---------------------*/
