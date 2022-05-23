@@ -9,20 +9,16 @@ header{
     height: 42px;
     font-size: 90%;
 }
-
 header h1{
     margin: 20px 0;
     font-weight: normal;
 }
-
 main{
     font-family: 'Roboto';
 }
-
 a{
     text-decoration: none;
 }
-
 ul{
     list-style: none;
     padding-left: 0;
@@ -68,7 +64,7 @@ ul{
     border-bottom-right-radius:26px;
     box-shadow: 2px 2px 4px -2px #3c393d;
     background:linear-gradient(#FF79DA, #9356DC);
-  } 
+} 
 .buttonClass:hover {
     background: linear-gradient(#da4ff3, #e199ee);
     box-shadow: 3px 3px 6px -2px #3c393d;
@@ -101,7 +97,7 @@ ul{
     border-bottom-left-radius:26px;
     border-bottom-right-radius:26px;
     background:#9356DC;
-  }
+}
 .fonctionnement-conteneur-filtre a{
     display: flex;
     align-items: center;
@@ -124,11 +120,9 @@ ul{
 .fonctionnement-conteneur-filtre p{
     margin-left: 15px;
 }
-/*REMPLACER EVENTUELEMENT la classe .fonctionnementButton par [.fonctionnement-conteneur-filtre a]*/
-.fonctionnementButton:hover {
+.fonctionnement-conteneur-filtre a:hover {
     background: linear-gradient(#e9e9e9, #f9f9f9);
   }
-
 /*---------- Carte -----------*/
 .carte {
    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
@@ -180,7 +174,6 @@ ul{
   margin: 0;
   margin-bottom: 5px;
 }
-
 .carte-icone{
     display: flex;
     width: 35px;
@@ -205,7 +198,6 @@ ul{
     opacity: 1;
     font-size: 1.6em;
 }
-
 /*---------------------menus---------------------*/
 .menus {
     padding: 65px 20px 65px 20px;
