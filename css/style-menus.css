@@ -1,7 +1,31 @@
-/**{
+/*{
     font-family: 'Roboto', 'Shrikhand', cursive, sans-serif;
 }
+
+.display-flex_center {
+    display: flex;    
+    justify-content: center;
+}
+.display-flex_flex {
+    display: flex;
+}
+.justify-content_space-between {
+    justify-content: space-between;
+}
+.align-items_center {
+    align-items: center;
+}
+.flex_space-between{
+    display: flex;
+}
+.justify-
+justify-content: space-between;}
+
+.justify-content_center {
+    justify-content: center;
+}
 */
+
 header{
     text-align: center;
     font-family: 'Shrikhand';
@@ -42,14 +66,24 @@ ul{
     font-size: larger;
 }
 .plats-carte{
-    padding: 10px;
-    margin: 20px 0;background-color: white;
+    /* padding: 10px; */
+    height: 85px;
+    margin: 20px 0;
+    background-color: white;
     border-radius: 16px;
     box-shadow: 0 3px 4px 0 rgb(0 0 0 / 20%);
     transition: 0.3s;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 .plats-carte:hover{
     cursor: pointer;
+}
+.plats-carte-texte{
+    /* display: block; */
+    width: 100%;
+    margin: 10px 20px 10px 10px;
 }
 .plats-carte h3 {
     margin: 3px 0 3px 0;
@@ -57,16 +91,27 @@ ul{
 .plats-carte p {
     margin: 3px 0 3px 0;
 }
-.plats-carte a{
-    /* margin-left: 28px; */
-    color: black;
-}
-.flex_space-between{
+.plats-carte-texte-et-prix {
     display: flex;
     justify-content: space-between;
+    align-items: center;/* width: 100%; */
+}
+.coche-boite{
+    display: flex;background-color: #99E2D0;
+    width: 25%;
+    height: 100%;    
+    border-radius: 0 16px 16px 0;
+    justify-content: center;
+    align-items: center;
+}
+.coche-boite .fa-xl {
+    /* line-height: normal; */
+    color: white;
 }
 .menus-titre{    
-    align-items: baseline;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
 }
 /*---------------------menus---------------------*/
 .menus {
@@ -87,6 +132,9 @@ ul{
     display: flex;    
     align-items: center;
     justify-content: center;
+}
+.carte-icone .fa-regular{
+    line-height: normal;
 }
 .carte-icone .fa-solid{
     position: absolute; 
