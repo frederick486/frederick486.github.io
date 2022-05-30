@@ -27,13 +27,16 @@ justify-content: space-between;}
 */
 
 header{
-    text-align: center;
+    display: flex;
     font-family: 'Shrikhand';
     height: 42px;
-    /* font-size: 90%; */
+    align-items: center;
+}
+header a{
+    margin-left: 5%;
 }
 header h1{
-    margin: 20px 0;
+    margin: 20px auto;
     font-weight: normal;
 }
 main{
@@ -285,19 +288,22 @@ footer .fa-solid{
 /*--------------------DESKTOP----------------------*/
 @media screen and (min-width: 768px)
 {
-    .fonctionnement-conteneur-filtre {
+    .banniere img{
+        height: 250px;
+    }
+    .menus{
+        width: 65%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .EntreePlatDessert{
         display: flex;
         justify-content: space-between;
     }
-    .fonctionnement-conteneur-filtre div {
-        width: 33%;
+    .plats{
+        width: 30%;
+    }   
+    .plats strong{
+        font-size: initial;
     }
-    .menus-conteneur-carte{
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-    }
-    .carte {
-        width: 49%;
-        margin: 10px 0;} 
 }
