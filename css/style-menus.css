@@ -44,6 +44,19 @@ ul {
      object-fit: cover;
 }
 
+/*-------Titres des menus------------*/
+.menus-titre {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
 /*------- Plats --------*/
 .plats {
   margin: 30px 0 50px 0;
@@ -66,33 +79,108 @@ ul {
   background-color: #99E2D0;
 }
 
-.plats-carte {
-  /* padding: 10px; */
-  height: 85px;
-  margin: 20px 0;
+.plat {
   background-color: white;
-  border-radius: 16px;
-  -webkit-box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.2);
-          box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.2);
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
+  padding: 1rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  position: relative;
+  border-radius: 0.75rem;
+  margin: 1rem 0;
+  -webkit-box-shadow: 0.25rem 0.25rem 1rem rgba(0, 0, 0, 0.1);
+          box-shadow: 0.25rem 0.25rem 1rem rgba(0, 0, 0, 0.1);
   overflow: hidden;
+  cursor: pointer;
+  max-width: 100%;
   -webkit-animation: apparition 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
           animation: apparition 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
 }
 
-.plats-carte p {
-  margin: 3px 0 3px 0;
+.plat:hover i {
+  -webkit-animation: rotate-center 1s ease-in-out both;
+          animation: rotate-center 1s ease-in-out both;
+}
+
+.plat .texte {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.plat .titre {
+  margin: 0;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.plat .descriptif {
+  margin: 0;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.plat .prix {
+  font-weight: bold;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  padding-left: 0.5rem;
+}
+
+.plat .checkbox {
+  background-color: #99E2D0;
+  margin: -1rem -5rem -1rem 1rem;
+  width: 4rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+}
+
+.plat:hover .checkbox {
+  margin-right: -1rem;
+}
+
+.plat .icone {
+  height: 1.6rem;
+  width: 1.6rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 100px;
+}
+
+.plat:hover .icone {
+  -webkit-transform: rotate(0);
+          transform: rotate(0);
+}
+
+.plat .fa-circle-check {
+  color: white;
 }
 
 .un {
@@ -101,136 +189,69 @@ ul {
 }
 
 .deux {
-  -webkit-animation-delay: 0.5s;
-          animation-delay: 0.5s;
+  -webkit-animation-delay: 0.15s;
+          animation-delay: 0.15s;
 }
 
 .trois {
-  -webkit-animation-delay: 0.9s;
-          animation-delay: 0.9s;
+  -webkit-animation-delay: 0.20s;
+          animation-delay: 0.20s;
+}
+
+.quatre {
+  -webkit-animation-delay: 0.25s;
+          animation-delay: 0.25s;
+}
+
+.cinq {
+  -webkit-animation-delay: 0.30s;
+          animation-delay: 0.30s;
+}
+
+.six {
+  -webkit-animation-delay: 0.35s;
+          animation-delay: 0.35s;
+}
+
+.sept {
+  -webkit-animation-delay: 0.40s;
+          animation-delay: 0.40s;
+}
+
+.huit {
+  -webkit-animation-delay: 0.45s;
+          animation-delay: 0.45s;
+}
+
+.neuf {
+  -webkit-animation-delay: 0.50s;
+          animation-delay: 0.50s;
 }
 
 @-webkit-keyframes apparition {
   0% {
-    -webkit-transform: scale(0);
-            transform: scale(0);
+    -webkit-transform: translateY(50%);
+            transform: translateY(50%);
+    opacity: 0;
   }
   100% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
   }
 }
 
 @keyframes apparition {
   0% {
-    -webkit-transform: scale(0);
-            transform: scale(0);
+    -webkit-transform: translateY(50%);
+            transform: translateY(50%);
+    opacity: 0;
   }
   100% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
   }
-}
-
-.plats-carte-texte {
-  width: 95%;
-  margin-right: 5px;
-  margin-left: 10px;
-}
-
-.plats-carte-texte-et-prix {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: baseline;
-      -ms-flex-align: baseline;
-          align-items: baseline;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-.plats-carte-texte-et-prix-text {
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-}
-
-.plats-carte:hover {
-  cursor: pointer;
-}
-
-.coche-boite {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  background-color: #99E2D0;
-  width: 25%;
-  height: 100%;
-  border-radius: 0 16px 16px 0;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  position: absolute;
-  right: -25%;
-}
-
-.plats-carte:hover .coche-boite {
-  -webkit-animation: slide-left 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-          animation: slide-left 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-}
-
-@-webkit-keyframes slide-left {
-  0% {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
-  }
-  100% {
-    -webkit-transform: translateX(-100%);
-            transform: translateX(-100%);
-  }
-}
-
-@keyframes slide-left {
-  0% {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
-  }
-  100% {
-    -webkit-transform: translateX(-100%);
-            transform: translateX(-100%);
-  }
-}
-
-.plats-carte:hover .plats-carte-texte {
-  -webkit-animation: reductionLargeur 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-          animation: reductionLargeur 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-}
-
-@-webkit-keyframes reductionLargeur {
-  0% {
-    width: 100%;
-  }
-  100% {
-    width: 70%;
-  }
-}
-
-@keyframes reductionLargeur {
-  0% {
-    width: 100%;
-  }
-  100% {
-    width: 70%;
-  }
-}
-
-.plats-carte:hover i {
-  -webkit-animation: rotate-center 1s ease-in-out both;
-          animation: rotate-center 1s ease-in-out both;
 }
 
 @-webkit-keyframes rotate-center {
@@ -255,22 +276,6 @@ ul {
   }
 }
 
-.coche {
-  color: white;
-}
-
-.menus-titre {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
 /*---------------------menus---------------------*/
 .menus {
   padding: 40px 20px 65px 20px;
@@ -288,7 +293,7 @@ ul {
 }
 
 /*-------Coeur du titre --------*/
-.carte-icone {
+.coeur {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -300,11 +305,11 @@ ul {
           justify-content: center;
 }
 
-.carte-icone .fa-regular {
+.coeur .fa-regular {
   line-height: normal;
 }
 
-.carte-icone .fa-solid {
+.coeur .fa-solid {
   position: absolute;
   line-height: normal;
   background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
@@ -318,7 +323,7 @@ ul {
   font-size: 1.6em;
 }
 
-.carte-icone .fa-solid:hover {
+.coeur .fa-solid:hover {
   opacity: 1;
   font-size: 1.6em;
 }
@@ -398,7 +403,7 @@ footer .fa-solid {
     margin-left: auto;
     margin-right: auto;
   }
-  .EntreePlatDessert {
+  .sousmenus {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;

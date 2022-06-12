@@ -45,6 +45,13 @@ ul{
         object-fit: cover; 
     }
 }
+/*-------Titres des menus------------*/
+
+.menus-titre{    
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
 
 /*------- Plats --------*/
 
@@ -68,107 +75,132 @@ ul{
     // margin-bottom: 15px;
 }
 
-.plats-carte{
-    /* padding: 10px; */
-    height: 85px;
-    margin: 20px 0;
+.plat {
     background-color: white;
-    border-radius: 16px;
-    box-shadow: 0 3px 4px 0 rgba(0, 0, 0,  0.20); //RGB(0 0 0 / 20%);
-    transition: 0.3s;
+    padding: 1rem;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: relative;
+    border-radius: 0.75rem ;
+    margin: 1rem 0;
+    box-shadow: 0.25rem 0.25rem 1rem rgba(0, 0, 0,  0.1);
     overflow: hidden;
+    cursor: pointer;
+    max-width: 100%;
     animation: apparition 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
-    p {
-        margin: 3px 0 3px 0;
+    &:hover i {
+        animation: rotate-center 1s ease-in-out both;
     }
+
+    .texte {
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        flex: 1;
+    }
+
+    .titre {
+        margin: 0;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+    }
+
+    .descriptif {
+        margin: 0;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+    }
+
+    .prix {
+        font-weight: bold;
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+        padding-left: 0.5rem;
+    }
+
+    .checkbox {
+        background-color: $Color_tertiary;
+        margin: -1rem -5rem -1rem 1rem;
+        width: 4rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition-duration: 0.5s;
+    }
+
+    &:hover .checkbox {
+        margin-right: -1rem; //translation à gauche quand la box plat est survolée
+    }
+
+    .icone {
+        height: 1.6rem;
+        width: 1.6rem;
+        // background-color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 100px;
+        // transform: rotate(180deg);
+        // transition-duration: 0.5s;
+    }
+
+    &:hover .icone { // quand le plat est survolé, l'icône toune sur elle même
+        transform: rotate(0);
+    }
+
+    .fa-circle-check {
+        color: white;
+    }
+    // transition: 0.3s;
+    // justify-content: space-between;
+    // align-items: center;
+    // position: relative;
+
 }
+
+// --------- Délais d'apparitions ---------//
 
 .un {
     animation-delay: 0.1s;
 }
-
 .deux {
-    animation-delay: 0.5s;
+    animation-delay: 0.15s;
+}
+.trois {
+    animation-delay: 0.20s;
+}
+.quatre {
+    animation-delay: 0.25s;
+}
+.cinq {
+    animation-delay: 0.30s;
+}
+.six {
+    animation-delay: 0.35s;
+}
+.sept {
+    animation-delay: 0.40s;
+}
+.huit {
+    animation-delay: 0.45s;
+}
+.neuf {
+    animation-delay: 0.50s;
 }
 
-.trois {
-    animation-delay: 0.9s;
-}
+// --------- keyframes ---------//
 
 @keyframes apparition {
     0% {
-      transform: scale(0);
+      transform: translateY(50%);
+      opacity: 0;
     }
     100% {
-      transform: scale(1);
+      transform: translateY(0);
+      opacity: 1;
     }
   }
-
-.plats-carte-texte{
-    width: 95%;
-    margin-right: 5px;
-    margin-left: 10px;
-}
-.plats-carte-texte-et-prix {
-    display: flex;
-    align-items: baseline;
-    justify-content: space-between;
-    }
-
-.plats-carte-texte-et-prix-text {
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-}
-
-.plats-carte:hover{
-    cursor: pointer;
-}
-.coche-boite{
-    display: flex;
-    background-color: #99E2D0;
-    width: 25%;
-    height: 100%;    
-    border-radius: 0 16px 16px 0;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    right: -25%;
-}
-
-.plats-carte:hover .coche-boite {
-	animation: slide-left 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-}
-
-@keyframes slide-left {
-    0% {
-      transform: translateX(0);
-    }
-    100% {
-      transform: translateX(-100%);
-    }
-  }
-
-.plats-carte:hover .plats-carte-texte {
-    animation: reductionLargeur 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-} 
-
-@keyframes reductionLargeur {
-    0% {
-        width: 100%;
-    }
-    100% {
-        width: 70%;
-    }
-}
-
-.plats-carte:hover i {
-	animation: rotate-center 1s ease-in-out both;
-}
 
 @keyframes rotate-center {
     0% {
@@ -179,14 +211,7 @@ ul{
     }
   }
 
-.coche{
-    color: white;
-}
-.menus-titre{    
-    align-items: center;
-    display: flex;
-    justify-content: space-between;
-}
+
 /*---------------------menus---------------------*/
 .menus {
     padding: 40px 20px 65px 20px;
@@ -202,29 +227,30 @@ ul{
     margin: 0;
 }    
 /*-------Coeur du titre --------*/
-.carte-icone{
+.coeur{
     display: flex;    
     align-items: center;
     justify-content: center;
+    .fa-regular{
+        line-height: normal;
+    }
+    .fa-solid{
+        position: absolute; 
+        line-height: normal;
+        background: linear-gradient(#FF79DA, #9356DC);
+        color: transparent;
+        background-clip: text;
+        -webkit-background-clip: text;
+        opacity: 0; 
+        transition: 1s;
+        font-size: 1.6em;
+    }
+    .fa-solid:hover{
+        opacity: 1;
+        font-size: 1.6em;
+    }
 }
-.carte-icone .fa-regular{
-    line-height: normal;
-}
-.carte-icone .fa-solid{
-    position: absolute; 
-    line-height: normal;
-    background: linear-gradient(#FF79DA, #9356DC);
-    color: transparent;
-    background-clip: text;
-    -webkit-background-clip: text;
-    opacity: 0; 
-    transition: 1s;
-    font-size: 1.6em;
-}
-.carte-icone .fa-solid:hover{
-    opacity: 1;
-    font-size: 1.6em;
-}
+
 /*-------Boutton commander--------*/
 .buttonClass {
     display: flex;
@@ -246,12 +272,7 @@ ul{
         box-shadow: 3px 3px 6px -2px #3c393d;
     }             
 } 
-
-// .buttonClass:hover {
-//     background: linear-gradient(#da4ff3, #e199ee);
-//     box-shadow: 3px 3px 6px -2px #3c393d;
-// }                       
-
+                
 /*--------------------footer----------------------*/
 footer {
     font-family: 'Roboto';
@@ -288,7 +309,7 @@ footer {
         margin-left: auto;
         margin-right: auto;
     }
-    .EntreePlatDessert{
+    .sousmenus{
         display: flex;
         justify-content: space-between;
     }
