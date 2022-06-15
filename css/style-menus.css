@@ -1,4 +1,17 @@
 @charset "UTF-8";
+main {
+  font-family: 'Roboto';
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
 header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -17,19 +30,6 @@ header a {
 header h1 {
   margin: 20px auto;
   font-weight: normal;
-}
-
-main {
-  font-family: 'Roboto';
-}
-
-a {
-  text-decoration: none;
-}
-
-ul {
-  list-style: none;
-  padding-left: 0;
 }
 
 /*-------Bannière------------*/
@@ -97,8 +97,8 @@ ul {
 }
 
 .plat:hover i {
-  -webkit-animation: rotate-center 1s ease-in-out both;
-          animation: rotate-center 1s ease-in-out both;
+  -webkit-animation: rotate-center 0.5s ease-in-out both;
+          animation: rotate-center 0.5s ease-in-out both;
 }
 
 .plat .texte {
@@ -174,13 +174,30 @@ ul {
   border-radius: 100px;
 }
 
-.plat:hover .icone {
-  -webkit-transform: rotate(0);
-          transform: rotate(0);
-}
-
 .plat .fa-circle-check {
   color: white;
+}
+
+@-webkit-keyframes rotate-center {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate-center {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
 }
 
 .un {
@@ -254,29 +271,7 @@ ul {
   }
 }
 
-@-webkit-keyframes rotate-center {
-  0% {
-    -webkit-transform: rotate(0);
-            transform: rotate(0);
-  }
-  100% {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-  }
-}
-
-@keyframes rotate-center {
-  0% {
-    -webkit-transform: rotate(0);
-            transform: rotate(0);
-  }
-  100% {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-  }
-}
-
-/*---------------------menus---------------------*/
+/*-------------- menus ------------*/
 .menus {
   padding: 40px 20px 65px 20px;
   background-color: #ededed;
@@ -328,7 +323,7 @@ ul {
   font-size: 1.6em;
 }
 
-/*-------Boutton commander--------*/
+/*-------Boutton "commander"--------*/
 .buttonClass {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -340,8 +335,6 @@ ul {
       -ms-flex-align: center;
           align-items: center;
   margin: auto;
-  /* margin-top: 30px; */
-  /* font-size:15px; */
   width: 180px;
   height: 50px;
   border-width: 1px;

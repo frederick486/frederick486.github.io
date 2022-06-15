@@ -2,9 +2,23 @@
 //     font-family: 'Roboto', 'Shrikhand', cursive, sans-serif;
 // }
 
-$Color_Primary : #9356DC;
-$Color_Secondary : #FF79DA;
-$Color_tertiary : #99E2D0;
+@import "../sass/utils/variables";
+
+
+main{
+    font-family: 'Roboto';
+}
+
+a{
+    text-decoration: none;
+}
+
+ul{
+    list-style: none;
+    padding-left: 0;
+}
+
+//---------- header ----------------
 
 header{
     display: flex;
@@ -18,19 +32,6 @@ header{
         margin: 20px auto;
         font-weight: normal;
     }
-}
-
-main{
-    font-family: 'Roboto';
-}
-
-a{
-    text-decoration: none;
-}
-
-ul{
-    list-style: none;
-    padding-left: 0;
 }
 
 /*-------Bannière------------*/
@@ -47,7 +48,7 @@ ul{
 }
 /*-------Titres des menus------------*/
 
-.menus-titre{    
+.menus-titre {    
     align-items: center;
     display: flex;
     justify-content: space-between;
@@ -72,7 +73,6 @@ ul{
     height: 5px;
     position: absolute;
     background-color: $Color_tertiary;
-    // margin-bottom: 15px;
 }
 
 .plat {
@@ -85,9 +85,9 @@ ul{
     overflow: hidden;
     cursor: pointer;
     max-width: 100%;
-    animation: apparition 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+    animation: apparition 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both; // apparition du plat au chargement de l'écran
     &:hover i {
-        animation: rotate-center 1s ease-in-out both;
+        animation: rotate-center 0.5s ease-in-out both; // Rotation de l'icône pendant la translation de la checkbox
     }
 
     .texte {
@@ -130,36 +130,33 @@ ul{
     }
 
     &:hover .checkbox {
-        margin-right: -1rem; //translation à gauche quand la box plat est survolée
+        margin-right: -1rem; //translation à gauche de la checkbox quand la box plat est survolée
     }
 
     .icone {
         height: 1.6rem;
         width: 1.6rem;
-        // background-color: white;
         display: flex;
         align-items: center;
         justify-content: center;
         border-radius: 100px;
-        // transform: rotate(180deg);
-        // transition-duration: 0.5s;
-    }
-
-    &:hover .icone { // quand le plat est survolé, l'icône toune sur elle même
-        transform: rotate(0);
     }
 
     .fa-circle-check {
         color: white;
     }
-    // transition: 0.3s;
-    // justify-content: space-between;
-    // align-items: center;
-    // position: relative;
-
 }
 
-// --------- Délais d'apparitions ---------//
+@keyframes rotate-center {
+    0% {
+      transform: rotate(0);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+// --------- Délais d'apparitions des plats---------//
 
 .un {
     animation-delay: 0.1s;
@@ -202,17 +199,8 @@ ul{
     }
   }
 
-@keyframes rotate-center {
-    0% {
-      transform: rotate(0);
-    }
-    100% {
-      transform: rotate(360deg);
-    }
-  }
+/*-------------- menus ------------*/
 
-
-/*---------------------menus---------------------*/
 .menus {
     padding: 40px 20px 65px 20px;
     background-color: #ededed;
@@ -220,13 +208,16 @@ ul{
     margin-top: -40px;
     position: relative;
 }
+
 .menus h2 {
     font-family: 'Shrikhand';   
     font-weight: 100;
     font-size: xx-large;
     margin: 0;
 }    
+
 /*-------Coeur du titre --------*/
+
 .coeur{
     display: flex;    
     align-items: center;
@@ -251,14 +242,12 @@ ul{
     }
 }
 
-/*-------Boutton commander--------*/
+/*-------Boutton "commander"--------*/
 .buttonClass {
     display: flex;
     justify-content: center;
     align-items: center;
     margin: auto;
-    /* margin-top: 30px; */
-    /* font-size:15px; */
     width: 180px;
     height: 50px;
     border-width:1px;
@@ -274,6 +263,7 @@ ul{
 } 
                 
 /*--------------------footer----------------------*/
+
 footer {
     font-family: 'Roboto';
     background-color: #353131;
@@ -295,10 +285,11 @@ footer {
     }
 }
 
-.conteneur-incone{
+.conteneur-incone {
     width: 30px;
 }
 /*--------------------DESKTOP----------------------*/
+
 @media screen and (min-width: 768px)
 {
     .banniere img{

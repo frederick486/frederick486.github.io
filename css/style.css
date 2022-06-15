@@ -3,18 +3,7 @@
     font-family: 'Roboto', 'Shrikhand', cursive, sans-serif;
 }
 */
-header {
-  text-align: center;
-  font-family: 'Shrikhand';
-  height: 42px;
-  font-size: 90%;
-}
-
-header h1 {
-  margin: 20px 0;
-  font-weight: normal;
-}
-
+/*---------générales----------*/
 main {
   font-family: 'Roboto';
 }
@@ -28,7 +17,20 @@ ul {
   padding-left: 0;
 }
 
-/*------localisation------*/
+/*---------header----------*/
+header {
+  text-align: center;
+  font-family: 'Shrikhand';
+  height: 42px;
+  font-size: 90%;
+}
+
+header h1 {
+  margin: 20px 0;
+  font-weight: normal;
+}
+
+/*------------- bordure -----------*/
 .bordure {
   width: 100%;
   height: 4px;
@@ -36,6 +38,7 @@ ul {
   background: linear-gradient(#19181859, #4a454529);
 }
 
+/*----------- localisation ----------*/
 .localisation {
   background-color: #e2e2e2;
   height: 50px;
@@ -80,10 +83,7 @@ ul {
   border-width: 1px;
   color: #ffffff;
   font-weight: bold;
-  border-top-left-radius: 26px;
-  border-top-right-radius: 26px;
-  border-bottom-left-radius: 26px;
-  border-bottom-right-radius: 26px;
+  border-radius: 26px;
   -webkit-box-shadow: 2px 2px 4px -2px #3c393d;
           box-shadow: 2px 2px 4px -2px #3c393d;
   background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
@@ -102,7 +102,7 @@ ul {
   padding: 20px 20px 65px 20px;
 }
 
-.fonctionnement-conteneur-filtre div {
+.fonctionnement-conteneur div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -112,7 +112,7 @@ ul {
   position: relative;
 }
 
-.fonctionnement-conteneur-filtre span {
+.fonctionnement-conteneur span {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -129,14 +129,11 @@ ul {
   height: 20px;
   border-width: 1px;
   color: #fff;
-  border-top-left-radius: 26px;
-  border-top-right-radius: 26px;
-  border-bottom-left-radius: 26px;
-  border-bottom-right-radius: 26px;
+  border-radius: 26px;
   background: #9356DC;
 }
 
-.fonctionnement-conteneur-filtre a {
+.fonctionnement-conteneur a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -152,22 +149,30 @@ ul {
   color: black;
   border-color: #dcdcdc;
   font-weight: bold;
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
-  border-bottom-left-radius: 20px;
-  border-bottom-right-radius: 20px;
+  border-radius: 20px;
   -webkit-box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.15);
           box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.15);
   background: -webkit-gradient(linear, left top, left bottom, from(#e9e9e9), to(#f9f9f9));
   background: linear-gradient(#e9e9e9, #f9f9f9);
 }
 
-.fonctionnement-conteneur-filtre a:hover {
+.fonctionnement-conteneur a:hover {
   background: white;
 }
 
-.fonctionnement-conteneur-filtre p {
+.fonctionnement-conteneur p {
   margin-left: 15px;
+}
+
+/*---------------------menus---------------------*/
+.menus {
+  padding: 65px 20px 65px 20px;
+  background-color: #dab4d021;
+}
+
+.menus h2 {
+  margin-top: 0;
+  margin-bottom: 30px;
 }
 
 /*---------- Carte -----------*/
@@ -192,6 +197,7 @@ ul {
   height: 100%;
 }
 
+/*---------- Sticker -----------*/
 .sticker {
   position: absolute;
   top: 15px;
@@ -201,6 +207,7 @@ ul {
   color: #138367;
 }
 
+/*------------------------------*/
 .carte-conteneur-image {
   position: relative;
   width: 100%;
@@ -271,24 +278,13 @@ ul {
   background-clip: text;
   -webkit-background-clip: text;
   opacity: 0;
-  -webkit-transition: 1s;
-  transition: 1s;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 .carte-icone .fa-solid:hover {
   opacity: 1;
   font-size: 1.6em;
-}
-
-/*---------------------menus---------------------*/
-.menus {
-  padding: 65px 20px 65px 20px;
-  background-color: #dab4d021;
-}
-
-.menus h2 {
-  margin-top: 0;
-  margin-bottom: 30px;
 }
 
 /*--------------------footer----------------------*/
@@ -325,7 +321,7 @@ footer .fa-solid {
 
 /*--------------------DESKTOP----------------------*/
 @media screen and (min-width: 768px) {
-  .fonctionnement-conteneur-filtre {
+  .fonctionnement-conteneur {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -333,10 +329,10 @@ footer .fa-solid {
         -ms-flex-pack: justify;
             justify-content: space-between;
   }
-  .fonctionnement-conteneur-filtre div {
+  .fonctionnement-conteneur div {
     width: 33%;
   }
-  .menus-conteneur-carte {
+  .menus-conteneur {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
