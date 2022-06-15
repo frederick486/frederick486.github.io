@@ -1,0 +1,25 @@
+.heart {
+    display: flex;
+    width: 35px;
+    height: 35px;
+    align-items: center;
+    justify-content: center;
+    .fa-regular{
+        color: black;
+        line-height: normal;
+    }
+    .fa-solid{
+        position: absolute; 
+        line-height: normal;
+        background: linear-gradient($Color_Secondary, $Color_Primary);
+        color: transparent;
+        background-clip: text;
+        -webkit-background-clip: text;
+        opacity: 0; // l'icône du coeur remplie est positionnée au dessus du coeur vide, mais est totalement transparente (opacity = 0)
+        transition: 0.5s;
+        &:hover{ // Lors du surval de l'icône, son opacité passe à 1 en 1 seconde
+            opacity: 1;
+            font-size: 1.6em;
+        }
+    }
+}

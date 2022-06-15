@@ -1,0 +1,41 @@
+header{
+    text-align: center;
+    font-family: 'Shrikhand';
+    height: 42px;
+    font-size: 90%;
+    h1{
+        margin: 20px 0;
+        font-weight: normal;
+    }
+}
+
+.localisation {
+    background-color: rgb(226, 226, 226);
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    span{
+        margin-left: 15px;
+        font-weight: 500;
+    }
+}
+
+/*-------présentation--------*/
+
+.presentation {
+    text-align: center;
+    padding: 20px 45px 60px 45px;
+    background-color: #dab4d021;
+}
+
+/*---------------------menus---------------------*/
+
+.menus {
+    padding: 65px 20px 65px 20px;
+    background-color: #dab4d021;
+    h2 {
+        margin-top: 0;
+        margin-bottom: 30px;
+    }             
+}

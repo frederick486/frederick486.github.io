@@ -1,0 +1,138 @@
+/*------- Plats --------*/
+
+.plats {
+    margin: 30px 0 50px 0;
+    h3{
+        text-transform: uppercase;
+        font-weight: normal;
+        margin: 15px 0 5px 0;
+    }
+    strong{
+        font-size: larger;
+    }
+}
+
+
+.plat {
+    background-color: white;
+    padding: 1rem;
+    display: flex;
+    border-radius: 0.75rem ;
+    margin: 1rem 0;
+    box-shadow: 0.25rem 0.25rem 1rem rgba(0, 0, 0,  0.1);
+    overflow: hidden;
+    cursor: pointer;
+    max-width: 100%;
+    animation: apparition 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both; // apparition du plat au chargement de l'écran
+    &:hover i {
+        animation: rotate-center 0.5s ease-in-out both; // Rotation de l'icône pendant la translation de la checkbox
+    }
+
+    .texte {
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        flex: 1;
+    }
+
+    .titre {
+        margin: 0;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+    }
+
+    .descriptif {
+        margin: 0;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+    }
+
+    .prix {
+        font-weight: bold;
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+        padding-left: 0.5rem;
+    }
+
+    .checkbox {
+        background-color: $Color_tertiary;
+        margin: -1rem -5rem -1rem 1rem;
+        width: 4rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition-duration: 0.5s;
+    }
+
+    &:hover .checkbox {
+        margin-right: -1rem; //translation à gauche de la checkbox quand la box plat est survolée
+    }
+
+    .icone {
+        height: 1.6rem;
+        width: 1.6rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 100px;
+    }
+
+    .fa-circle-check {
+        color: white;
+    }
+}
+
+@keyframes rotate-center {
+    0% {
+      transform: rotate(0);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+// --------- Délais d'apparitions des plats---------//
+
+.un {
+    animation-delay: 0.1s;
+}
+.deux {
+    animation-delay: 0.15s;
+}
+.trois {
+    animation-delay: 0.20s;
+}
+.quatre {
+    animation-delay: 0.25s;
+}
+.cinq {
+    animation-delay: 0.30s;
+}
+.six {
+    animation-delay: 0.35s;
+}
+.sept {
+    animation-delay: 0.40s;
+}
+.huit {
+    animation-delay: 0.45s;
+}
+.neuf {
+    animation-delay: 0.50s;
+}
+
+// --------- keyframes ---------//
+
+@keyframes apparition {
+    0% {
+      transform: translateY(50%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }

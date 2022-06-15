@@ -1,60 +1,70 @@
 @charset "UTF-8";
-main {
+.heart {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 35px;
+  height: 35px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.heart .fa-regular {
+  color: black;
+  line-height: normal;
+}
+
+.heart .fa-solid {
+  position: absolute;
+  line-height: normal;
+  background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
+  background: linear-gradient(#FF79DA, #9356DC);
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  opacity: 0;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.heart .fa-solid:hover {
+  opacity: 1;
+  font-size: 1.6em;
+}
+
+footer {
   font-family: 'Roboto';
+  background-color: #353131;
+  padding: 1px 20px 1px 20px;
 }
 
-a {
-  text-decoration: none;
-}
-
-ul {
-  list-style: none;
-  padding-left: 0;
-}
-
-header {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+footer h2 {
   font-family: 'Shrikhand';
-  height: 42px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-header a {
-  margin-left: 5%;
-}
-
-header h1 {
-  margin: 20px auto;
   font-weight: normal;
+  color: white;
 }
 
-/*-------Bannière------------*/
-.banniere figure {
-  margin: 10px 0 0 0;
-  width: 100%;
+footer a {
+  color: white;
 }
 
-.banniere img {
-  width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
-/*-------Titres des menus------------*/
-.menus-titre {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+footer li {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+footer .fa-solid {
+  color: white;
+}
+
+.conteneur-incone {
+  width: 30px;
 }
 
 /*------- Plats --------*/
@@ -70,13 +80,6 @@ header h1 {
 
 .plats strong {
   font-size: larger;
-}
-
-.trait_soulignement {
-  width: 60px;
-  height: 5px;
-  position: absolute;
-  background-color: #99E2D0;
 }
 
 .plat {
@@ -271,6 +274,51 @@ header h1 {
   }
 }
 
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-family: 'Shrikhand';
+  height: 42px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header a {
+  margin-left: 5%;
+}
+
+header h1 {
+  margin: 20px auto;
+  font-weight: normal;
+}
+
+/*-------Bannière------------*/
+.banniere figure {
+  margin: 10px 0 0 0;
+  width: 100%;
+}
+
+.banniere img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+/*-------Titres des menus------------*/
+.menus-titre {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
 /*-------------- menus ------------*/
 .menus {
   padding: 40px 20px 65px 20px;
@@ -287,43 +335,6 @@ header h1 {
   margin: 0;
 }
 
-/*-------Coeur du titre --------*/
-.coeur {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.coeur .fa-regular {
-  line-height: normal;
-}
-
-.coeur .fa-solid {
-  position: absolute;
-  line-height: normal;
-  background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
-  background: linear-gradient(#FF79DA, #9356DC);
-  color: transparent;
-  background-clip: text;
-  -webkit-background-clip: text;
-  opacity: 0;
-  -webkit-transition: 1s;
-  transition: 1s;
-  font-size: 1.6em;
-}
-
-.coeur .fa-solid:hover {
-  opacity: 1;
-  font-size: 1.6em;
-}
-
-/*-------Boutton "commander"--------*/
 .buttonClass {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -335,7 +346,13 @@ header h1 {
       -ms-flex-align: center;
           align-items: center;
   margin: auto;
-  width: 180px;
+  margin-top: 30px;
+  font-size: 15px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding-left: 50px;
+  padding-right: 50px;
   height: 50px;
   border-width: 1px;
   color: #ffffff;
@@ -354,39 +371,38 @@ header h1 {
           box-shadow: 3px 3px 6px -2px #3c393d;
 }
 
-/*--------------------footer----------------------*/
-footer {
+/**{
+    font-family: 'Roboto', 'Shrikhand', cursive, sans-serif;
+}
+*/
+/*---------propriétés générales----------*/
+main {
   font-family: 'Roboto';
-  background-color: #353131;
-  padding: 1px 20px 1px 20px;
 }
 
-footer h2 {
-  font-family: 'Shrikhand';
-  font-weight: normal;
-  color: white;
+a {
+  text-decoration: none;
 }
 
-footer a {
-  color: white;
+ul {
+  list-style: none;
+  padding-left: 0;
 }
 
-footer li {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin-bottom: 10px;
+.bordure {
+  width: 100%;
+  height: 4px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#19181859), to(#4a454529));
+  background: linear-gradient(#19181859, #4a454529);
 }
 
-footer .fa-solid {
-  color: white;
+.trait_soulignement {
+  width: 60px;
+  height: 5px;
+  position: absolute;
+  background-color: #99E2D0;
 }
 
-.conteneur-incone {
-  width: 30px;
-}
-
-/*--------------------DESKTOP----------------------*/
 @media screen and (min-width: 768px) {
   .banniere img {
     height: 250px;

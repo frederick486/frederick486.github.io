@@ -1,0 +1,18 @@
+@media screen and (min-width: 768px)
+{
+    .fonctionnement-conteneur {
+        display: flex;
+        justify-content: space-between;
+    }
+    .fonctionnement-conteneur div {
+        width: 33%;
+    }
+    .menus-conteneur{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }    
+    .carte {
+        width: 49%;
+        margin: 10px 0;} 
+}
