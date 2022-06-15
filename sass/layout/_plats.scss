@@ -96,33 +96,40 @@
 
 // --------- Délais d'apparitions des plats---------//
 
-.un {
-    animation-delay: 0.1s;
+@for $i from 1 through 9 {
+    .plat-#{$i} {
+        animation-delay: ($i * 0.05s);
+    }
 }
-.deux {
-    animation-delay: 0.15s;
-}
-.trois {
-    animation-delay: 0.20s;
-}
-.quatre {
-    animation-delay: 0.25s;
-}
-.cinq {
-    animation-delay: 0.30s;
-}
-.six {
-    animation-delay: 0.35s;
-}
-.sept {
-    animation-delay: 0.40s;
-}
-.huit {
-    animation-delay: 0.45s;
-}
-.neuf {
-    animation-delay: 0.50s;
-}
+
+
+// .un {
+//     animation-delay: 0.1s;
+// }
+// .deux {
+//     animation-delay: 0.15s;
+// }
+// .trois {
+//     animation-delay: 0.20s;
+// }
+// .quatre {
+//     animation-delay: 0.25s;
+// }
+// .cinq {
+//     animation-delay: 0.30s;
+// }
+// .six {
+//     animation-delay: 0.35s;
+// }
+// .sept {
+//     animation-delay: 0.40s;
+// }
+// .huit {
+//     animation-delay: 0.45s;
+// }
+// .neuf {
+//     animation-delay: 0.50s;
+// }
 
 // --------- keyframes ---------//
 
