@@ -96,7 +96,7 @@
 
 // --------- Délais d'apparitions des plats---------//
 
-@for $i from 1 through 9 {
+@for $i from 1 through 10 {
     .plat-#{$i} {
         animation-delay: ($i * 0.05s);
     }
