@@ -383,6 +383,10 @@ header h1 {
   background: #9356DC;
 }
 
+.fonctionnement-conteneur .fa-solid {
+  color: #575d5d;
+}
+
 .fonctionnement-conteneur a {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -408,6 +412,10 @@ header h1 {
 
 .fonctionnement-conteneur a:hover {
   background: white;
+}
+
+.fonctionnement-conteneur a:hover .fa-solid {
+  color: #9356DC;
 }
 
 .fonctionnement-conteneur p {
@@ -487,8 +495,7 @@ ul {
 
 .trait_soulignement {
   width: 60px;
-  height: 5px;
-  position: absolute;
+  height: 3px;
   background-color: #99E2D0;
 }
 

@@ -24,6 +24,9 @@
         border-radius:26px;
         background:$Color_Primary;
     }
+    .fa-solid {
+        color: #575d5d;
+    }
     a{
         display: flex;
         align-items: center;
@@ -44,6 +47,9 @@
         &:hover {
             // background: linear-gradient(#e9e9e9, #f9f9f9);
             background:white;
+        }
+        &:hover .fa-solid {
+            color: $Color_Primary;
         }
     }
     p{
