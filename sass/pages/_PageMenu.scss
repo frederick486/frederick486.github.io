@@ -1,10 +1,12 @@
 header{
     display: flex;
+    align-items: center;
     font-family: 'Shrikhand';
     height: 42px;
-    align-items: center;
-    a{
-        margin-left: 5%;
+    padding: 16px;
+    position: relative;
+    a {
+        margin-top: 5px;
     }
     h1{
         margin: 20px auto;
@@ -16,7 +18,7 @@ header{
 
 .banniere{
     figure{
-        margin: 10px 0 0 0;   
+        margin: 0;   
         width: 100%;
     }
     img{   

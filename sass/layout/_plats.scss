@@ -98,7 +98,7 @@
 
 @for $i from 1 through 10 {
     .plat-#{$i} {
-        animation-delay: ($i * 0.05s);
+        animation-delay: ($i * 0.2s);
     }
 }
 
