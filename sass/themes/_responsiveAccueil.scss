@@ -11,8 +11,11 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
+        max-width: 1280px;
+        margin: auto;
     }    
     .carte {
-        width: 49%;
-        margin: 10px 0;} 
+        width: 48%;
+        margin: 10px 0 20px 0;
+    } 
 }

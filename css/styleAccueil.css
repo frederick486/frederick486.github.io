@@ -34,9 +34,17 @@ footer h2 {
   font-family: "Shrikhand";
   font-weight: normal;
   color: white;
+  max-width: 1280px;
+  margin-right: auto;
+  margin-left: auto;
 }
 footer a {
   color: white;
+}
+footer ul {
+  max-width: 1280px;
+  margin-right: auto;
+  margin-left: auto;
 }
 footer li {
   display: flex;
@@ -111,9 +119,7 @@ footer .fa-solid {
   position: fixed;
   z-index: 1;
   inset: 0;
-  -webkit-animation: disappear 0s 2s forwards;
-          animation: disappear 0s 2s forwards;
-  /* Disparition du loader */
+  animation: disappear 0s 2s forwards; /* Disparition du loader */
 }
 
 .lds-dual-ring:after {
@@ -125,17 +131,7 @@ footer .fa-solid {
   border-radius: 50%;
   border: 6px solid #9356DC;
   border-color: #9356DC transparent #9356DC transparent;
-  -webkit-animation: lds-dual-ring 1.2s linear infinite;
-          animation: lds-dual-ring 1.2s linear infinite;
-}
-
-@-webkit-keyframes lds-dual-ring {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
+  animation: lds-dual-ring 1.2s linear infinite;
 }
 
 @keyframes lds-dual-ring {
@@ -144,11 +140,6 @@ footer .fa-solid {
   }
   100% {
     transform: rotate(360deg);
-  }
-}
-@-webkit-keyframes disappear {
-  to {
-    transform: scale(0);
   }
 }
 @keyframes disappear {
@@ -192,12 +183,14 @@ header h1 {
   background-color: rgba(218, 180, 208, 0.1294117647);
 }
 .menus h2 {
-  margin-top: 0;
-  margin-bottom: 30px;
+  margin: 0 auto 30px;
+  max-width: 1280px;
 }
 
 /*--------fonctionnement---------*/
 .fonctionnement {
+  max-width: 1280px;
+  margin: auto;
   padding: 20px 20px 65px 20px;
 }
 
@@ -256,7 +249,6 @@ header h1 {
   margin: auto;
   margin-top: 30px;
   font-size: 15px;
-  width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   padding-left: 50px;
@@ -319,19 +311,18 @@ ul {
     display: flex;
     justify-content: space-between;
   }
-
   .fonctionnement-conteneur div {
     width: 33%;
   }
-
   .menus-conteneur {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    max-width: 1280px;
+    margin: auto;
   }
-
   .carte {
-    width: 49%;
-    margin: 10px 0;
+    width: 48%;
+    margin: 10px 0 20px 0;
   }
 }/*# sourceMappingURL=styleAccueil.css.map */
